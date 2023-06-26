@@ -1,5 +1,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Biometrics -->
+    <uses-permission android:name="android.permission.USE_BIOMETRIC"/>
     
+    <!-- Internet -->
     <uses-permission android:name="android.permission.INTERNET"/>
 
     <!-- Permissions options for the `storage` group -->
@@ -51,7 +55,7 @@
                 <data android:scheme="http" />
                 <data android:scheme="https" />
                 <!-- TODO -->
-                <data android:host="el dominio web SIN HTTPS://" />
+                <data android:host="pokemon-deep-linking-website.up.railway.app" />
             </intent-filter>
 
         </activity>

@@ -40,7 +40,10 @@ class _PokemonView extends StatelessWidget {
         actions: [
           IconButton(
             onPressed: () {
-              Shareplugin.shareLink(pokemon.spriteFront, 'Mira este pókemon');
+              Shareplugin.shareLink(
+                'https://pokemon-deep-linking-website.up.railway.app/pokemons/${ pokemon.id }/', 
+                'Mira este pókemon'
+              );
             }, 
             icon: const Icon(Icons.share_outlined)
           )
