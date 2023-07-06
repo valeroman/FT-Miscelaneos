@@ -8,6 +8,10 @@ void main() {
 
   //! Bloquear la orientacion del telefono para que sea siempre portrait
   WidgetsFlutterBinding.ensureInitialized();
+
+  //* registrar el quick actions
+  QuickActionPlugin.registerActions();
+
   SystemChrome.setPreferredOrientations([
     DeviceOrientation.portraitUp
   ]);
