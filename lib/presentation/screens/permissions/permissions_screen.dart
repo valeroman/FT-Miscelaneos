@@ -25,6 +25,7 @@ class _PermissionsView extends ConsumerWidget {
 
     final textStyle = Theme.of(context).textTheme;
     final permissions = ref.watch( permissionsProvider );
+    final showAds = ref.watch( showAdsProvider );
 
     return ListView(
       children: [
@@ -62,6 +63,15 @@ class _PermissionsView extends ConsumerWidget {
           subtitle: Text('${ permissions.sensors }'), 
           onChanged: ( _ ) {
             ref.read(permissionsProvider.notifier).requestSensorsAccess();
+          }
+        ),
+
+        CheckboxListTile(
+          value: showAds,
+          title: Text('Mostrar Ads', style: textStyle.titleMedium),
+          subtitle: const Text('Esta opción muestra y oculta ads'), 
+          onChanged: ( _ ) {
+            ref.read(showAdsProvider.notifier).toogleAds();
           }
         ),
         

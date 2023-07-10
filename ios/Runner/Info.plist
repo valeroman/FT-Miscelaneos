@@ -3,6 +3,9 @@
 <plist version="1.0">
 <dict>
 
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-7639342699586268~4678392552</string>
+
 	<!-- Badge notifications-->
 	<key>UIBackgroundModes</key>
     <array>

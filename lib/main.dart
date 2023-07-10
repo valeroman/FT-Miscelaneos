@@ -4,17 +4,20 @@ import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:miscelaneos/config/config.dart';
 import 'package:miscelaneos/presentation/providers/providers.dart';
 
-void main() {
+void main() async {
 
   //! Bloquear la orientacion del telefono para que sea siempre portrait
   WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations([
+    DeviceOrientation.portraitUp
+  ]);
+
+  //! Inicializar el Admob
+  await AdmobPlugin.initialize();
 
   //* registrar el quick actions
   QuickActionPlugin.registerActions();
 
-  SystemChrome.setPreferredOrientations([
-    DeviceOrientation.portraitUp
-  ]);
 
   runApp( const ProviderScope(child: MainApp()));
 }
